@@ -205,30 +205,47 @@ footer {
   }
 }
 
-.info-table {
+/* 표 스타일: 강의 본문 비교표/평가표 */
+.data-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 18px 0;
+  margin: 18px 0 24px;
   background: white;
-  border: 1px solid #e5e7eb;
   border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
 }
 
-.info-table th,
-.info-table td {
+.data-table th,
+.data-table td {
   border: 1px solid #e5e7eb;
   padding: 12px 14px;
   text-align: left;
   vertical-align: top;
 }
 
-.info-table th {
+.data-table th {
   background: #f3f4f6;
-  font-weight: 700;
   color: #111827;
+  font-weight: 700;
 }
 
-.info-table tr:nth-child(even) td {
+.data-table tr:nth-child(even) td {
   background: #f9fafb;
+}
+
+.topic-body h4 {
+  margin: 20px 0 8px;
+  color: #374151;
+  font-size: 17px;
+}
+
+.topic-body a {
+  color: #2563eb;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.topic-body a:hover {
+  text-decoration: underline;
 }
