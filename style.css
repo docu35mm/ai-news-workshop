@@ -204,3 +204,31 @@ footer {
     padding: 18px;
   }
 }
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.info-table th,
+.info-table td {
+  border: 1px solid #e5e7eb;
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.info-table th {
+  background: #f3f4f6;
+  font-weight: 700;
+  color: #111827;
+}
+
+.info-table tr:nth-child(even) td {
+  background: #f9fafb;
+}
