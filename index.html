@@ -7,6 +7,42 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div id="passwordGate" class="gate">
+    <div class="gate-box">
+      <div class="lock">🔒</div>
+
+      <h1>생성형 AI 교육 웹앱</h1>
+
+      <p>
+        생성형 AI교육을 위한 웹앱입니다.<br>
+        현재 교육 기간이 종료되어<br>
+        본문 내용을 보실 수 없습니다.
+      </p>
+
+      <p>
+        교육 문의는 한국일보 김주성 기자에게 해주세요.
+      </p>
+
+      <div class="password-row">
+        <input
+          id="passwordInput"
+          type="password"
+          placeholder="비밀번호 입력"
+          autocomplete="current-password"
+        >
+        <button type="button" onclick="checkPassword()">입장</button>
+      </div>
+
+      <p id="errorMsg" aria-live="polite"></p>
+
+      <div class="notice-small">
+        © 한국일보 생성형 AI 교육
+      </div>
+    </div>
+  </div>
+
+  <div id="content" class="site-content" style="display:none;">
+
   <header class="hero">
     <div class="badge">신문협회 디지털 저널리즘 연수</div>
     <h1>기사 생산에서 생성형 AI 활용하기</h1>
@@ -48,5 +84,6 @@
   </footer>
 
   <script src="script.js"></script>
+  </div>
 </body>
 </html>
