@@ -249,3 +249,156 @@ footer {
 .topic-body a:hover {
   text-decoration: underline;
 }
+
+/* 비밀번호 잠금 화면 */
+.gate {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(96, 165, 250, 0.45), transparent 28%),
+    radial-gradient(circle at 80% 10%, rgba(250, 204, 21, 0.25), transparent 24%),
+    linear-gradient(135deg, #0f172a 0%, #1e3a8a 48%, #2563eb 100%);
+  padding: 24px;
+}
+
+.gate-box {
+  width: 100%;
+  max-width: 620px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  padding: 52px 44px 44px;
+  border-radius: 32px;
+  text-align: center;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
+}
+
+.lock {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #111827, #374151);
+  font-size: 48px;
+  box-shadow: 0 16px 40px rgba(17, 24, 39, 0.25);
+}
+
+.gate-box h1 {
+  margin: 0 0 20px;
+  color: #111827;
+  font-size: 34px;
+  line-height: 1.25;
+  letter-spacing: -0.04em;
+  word-break: keep-all;
+}
+
+.gate-box p {
+  margin: 10px 0;
+  color: #374151;
+  font-size: 18px;
+  line-height: 1.8;
+  word-break: keep-all;
+}
+
+.password-row {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gate-box input {
+  width: min(340px, 70%);
+  padding: 16px 18px;
+  border-radius: 16px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  color: #111827;
+  font-size: 17px;
+  text-align: center;
+  outline: none;
+}
+
+.gate-box input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+  background: #ffffff;
+}
+
+.gate-box button {
+  padding: 16px 24px;
+  border: none;
+  border-radius: 16px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.28);
+}
+
+.gate-box button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+#errorMsg {
+  min-height: 26px;
+  margin-top: 14px;
+  color: #dc2626;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.notice-small {
+  margin-top: 20px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.site-content {
+  min-height: 100vh;
+}
+
+@media (max-width: 640px) {
+  .gate {
+    align-items: center;
+    padding: 18px;
+  }
+
+  .gate-box {
+    padding: 38px 22px 32px;
+    border-radius: 24px;
+  }
+
+  .lock {
+    width: 78px;
+    height: 78px;
+    border-radius: 22px;
+    font-size: 40px;
+  }
+
+  .gate-box h1 {
+    font-size: 28px;
+  }
+
+  .gate-box p {
+    font-size: 16px;
+  }
+
+  .password-row {
+    flex-direction: column;
+  }
+
+  .gate-box input,
+  .gate-box button {
+    width: 100%;
+    margin-left: 0;
+  }
+}
