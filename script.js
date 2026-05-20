@@ -788,3 +788,49 @@ document.getElementById("collapseAll").addEventListener("click", () => {
     topic.querySelector(".topic-header span").textContent = "＋";
   });
 });
+
+// 비밀번호 잠금 화면
+const PASSWORD = "hankook2026";
+
+function showContent() {
+  const gate = document.getElementById("passwordGate");
+  const content = document.getElementById("content");
+
+  if (gate) gate.style.display = "none";
+  if (content) content.style.display = "block";
+
+  sessionStorage.setItem("aiEduAccess", "ok");
+}
+
+function checkPassword() {
+  const input = document.getElementById("passwordInput");
+  const errorMsg = document.getElementById("errorMsg");
+
+  if (!input) return;
+
+  if (input.value === PASSWORD) {
+    showContent();
+  } else {
+    if (errorMsg) errorMsg.textContent = "비밀번호가 맞지 않습니다.";
+    input.value = "";
+    input.focus();
+  }
+}
+
+window.addEventListener("load", () => {
+  const input = document.getElementById("passwordInput");
+
+  if (sessionStorage.getItem("aiEduAccess") === "ok") {
+    showContent();
+    return;
+  }
+
+  if (input) {
+    input.focus();
+    input.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        checkPassword();
+      }
+    });
+  }
+});
